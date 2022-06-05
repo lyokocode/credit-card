@@ -1,3 +1,11 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +13,148 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.container {
+
+  display: flex;
+  margin: 100px 0;
+}
+
+.card {
+  position: relative;
+  width: 352px;
+  height: 223px;
+}
+
+.card .front,
+.card .back {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: inherit;
+  height: inherit;
+  border-radius: 15px;
+  background: linear-gradient(31.58deg, #93278F -2.49%, #29ABE2 67.92%);
+  backface-visibility: hidden;
+  transition: 1.3s all;
+  perspective: 100px;
+  padding: 31px 27px;
+}
+
+.card .back {
+  transform: rotateY(180deg);
+}
+
+.card .front .card-top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card .front .card-number {
+  font-size: 26px;
+  letter-spacing: -3px;
+  color: #fff;
+  margin-top: 25px;
+  font-family: monospace;
+}
+
+.card .front .card-bottom {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+}
+
+.card .front .card-bottom .key {
+  font-size: 12px;
+  letter-spacing: -0.3px;
+  font-weight: 500;
+  opacity: 0.8;
+  margin-bottom: 5px;
+}
+
+.card .front .card-bottom .value {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.card .back .card-back {
+  background: #fff;
+  padding: 10px;
+  margin-top: auto;
+  display: flex;
+  justify-content: end;
+}
+
+.card .back .card-back em {
+  font-weight: bold;
+  margin-left: 15px;
+}
+
+.card.hover .back {
+  transform: rotateY(0);
+}
+
+.card.hover .front {
+  transform: rotateY(-180deg);
+}
+
+.card:hover .back {
+  transform: rotateY(0);
+}
+
+.card:hover .front {
+  transform: rotateY(-180deg);
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 223px;
+  padding: 20px;
+}
+
+input {
+  height: 35px;
+  margin: auto 5px;
+  text-align: center;
+  padding: 5px;
+  border-radius: 10px;
+  border: 1px solid black;
+}
+
+button {
+  width: 100px;
+  margin: 10px auto;
+  height: 25px;
+  background-color: #29ABE2;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 660px) {
+  body {
+    margin: 100px auto;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: auto auto;
+  }
 }
