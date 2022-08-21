@@ -1,7 +1,6 @@
 # Aelita
 
-Credit cart project
+## React Project
 
-## React app
-
-
+### demo
+https://aelita-creditcard.netlify.app
