@@ -3,4 +3,4 @@
 ## React Project
 
 ### demo
-https://aelita-creditcard.netlify.app
+https://aelita-reviews.netlify.app
