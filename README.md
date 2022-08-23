@@ -2,5 +2,5 @@
 
 ## React Project
 
-### demo
-https://aelita-reviews.netlify.app
+### demo:
+https://aelita-creditcard.netlify.app
